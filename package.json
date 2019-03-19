@@ -1,0 +1,14 @@
+{
+  "name": "codewars_unit_testing",
+  "version": "1.0.0",
+  "description": "unit testing with jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "author": "bukola",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^24.5.0"
+  }
+}
