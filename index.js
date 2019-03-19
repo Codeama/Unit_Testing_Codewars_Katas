@@ -36,7 +36,11 @@ codewars = {
       (accumulator, currentValue) => accumulator + Number(currentValue),
       0
     );
-  }
+  },
+
+  helloWorld: () => {},
+
+  isOpposite: (s1, s2) => {}
 };
 
 module.exports = codewars;

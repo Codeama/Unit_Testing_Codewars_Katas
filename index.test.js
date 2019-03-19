@@ -81,3 +81,13 @@ test(`sum of ['5', '0', 9, 3, 2, 1, '9', 6, 7] should equals 42`, () => {
 test(`sum of ['3', 6, 6, 0, '5', 8, 5, '6', 2,'0'] should equals 41`, () => {
   expect(codewars.sumMix(["3", 6, 6, 0, "5", 8, 5, "6", 2, "0"])).toBe(41);
 });
+
+//define a helloWorld function
+test("check function helloWorld is defined", () => {
+  expect(codewars.helloWorld).toBeDefined();
+});
+
+//isOpposite
+test("isOpposite must be defined", () => {
+  expect(codewars.isOpposite).toBeDefined();
+});
