@@ -3,22 +3,40 @@
 // Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"]
 // Note: keep the original order of the names in the output.
 codewars = {
-    friend: (friends) => {
-        if(!Array.isArray(friends)){
-            throw new TypeError('input is not an array!');
-        }
-        return friends.filter(friend => friend.length === 4)
-    },
-
-    isDivisible: (n, x, y) => {
-        return n % x === 0 && n % y === 0;
-    },
-
-    divisibleBy: (numbers, divisor) => {
-        return numbers.filter(number => number % divisor === 0);
+  friend: friends => {
+    if (!Array.isArray(friends)) {
+      throw new TypeError("input is not an array!");
     }
+    return friends.filter(friend => friend.length === 4);
+  },
 
+  isDivisible: (n, x, y) => {
+    return n % x === 0 && n % y === 0;
+  },
 
-}
+  divisibleBy: (numbers, divisor) => {
+    return numbers.filter(number => number % divisor === 0);
+  },
 
-  module.exports = codewars;
+  opposite: number => {
+    if (isNaN(number)) {
+      throw new Error("input is not a number!");
+    }
+    return -number;
+  },
+
+  //this is failing codeWars test :(
+  isToday: date => {
+    const newDate = new Date();
+    return date === newDate.getDate();
+  },
+
+  sumMix: x => {
+    return x.reduce(
+      (accumulator, currentValue) => accumulator + Number(currentValue),
+      0
+    );
+  }
+};
+
+module.exports = codewars;
