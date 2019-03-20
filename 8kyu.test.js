@@ -1,4 +1,4 @@
-const codewars = require("./index");
+const codewars = require("./8kyu");
 
 //filter for friends with four-letter name
 test("Filters for four-letter-named friends: Ryan and Matt", () => {
