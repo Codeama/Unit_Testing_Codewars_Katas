@@ -23,7 +23,7 @@ test("3 is divisible by 1 and 3 should be true", () => {
   expect(codewars.isDivisible(3, 1, 3)).toBe(true);
 });
 
-test("25 is not divisible by 2 and 2.5", () => {
+test("25 should not divisible by 2 and 2.5", () => {
   expect(codewars.isDivisible(25, 2, 2.5)).toBe(false);
 });
 
@@ -54,12 +54,12 @@ test("check is isToday is defined", () => {
   expect(codewars.isToday).toBeDefined();
 });
 
-test("check if date entered is today", () => {
+test("should return true for date is today", () => {
   const newDate = new Date();
   expect(codewars.isToday(newDate.getDate())).toBe(true);
 });
 
-test("check if date entered is yesterday", () => {
+test("should return false for date is not today", () => {
   const newDate = new Date();
   const yesterday = newDate.getDate() - 1;
   expect(codewars.isToday(yesterday)).toBe(false);
@@ -91,3 +91,16 @@ test("check function helloWorld is defined", () => {
 test("isOpposite must be defined", () => {
   expect(codewars.isOpposite).toBeDefined();
 });
+
+test(`"Bukola Jimoh" should be "Jimoh Bukola"`, () => {
+  expect(codewars.nameShuffler("Bukola Jimoh")).toBe("Jimoh Bukola");
+})
+
+//Take an arrow to the knee functionally
+test(`[84,101,115,116] should return "Test"`, () => {
+  expect(codewars.ArrowFunc([84,101,115,116])).toBe("Test");
+})
+
+test(`[70,85,83,32,82,79,72,32,68,65,72] should return 'FUS ROH DAH'`, () => {
+  expect(codewars.ArrowFunc([70,85,83,32,82,79,72,32,68,65,72])).toBe('FUS ROH DAH');
+})
