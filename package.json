@@ -4,7 +4,7 @@
   "description": "unit testing with jest",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll"
+    "test": "jest --watch"
   },
   "author": "bukola",
   "license": "ISC",
