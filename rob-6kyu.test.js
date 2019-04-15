@@ -15,7 +15,10 @@ describe('likes function', () => {
     expect(likes(['Paul'])).toEqual('Paul likes this')
   })
 
-  it.skip('should', () => {})
+  it('should state both names for two likes', () => {
+    expect(likes(['Jacob', 'Alex'])).toEqual('Jacob and Alex like this')
+  })
+
   it.skip('should', () => {})
   it.skip('should', () => {})
 
