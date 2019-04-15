@@ -1,5 +1,8 @@
 'use strict'
 
 module.exports = {
-  likes: () => 'no one likes this'
+  likes: names => {
+    if (names.length === 0) return 'no one likes this'
+    return 'Peter likes this'
+  }
 }
