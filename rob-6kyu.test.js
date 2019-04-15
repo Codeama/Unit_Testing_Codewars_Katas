@@ -33,14 +33,31 @@ describe('likes function', () => {
     expect(likes(['Foo', 'Bar', 'Baz'])).toEqual('Foo, Bar and Baz like this')
   })
 
-  it.skip('should', () => {})
-  it.skip('should', () => {})
-  it.skip('should', () => {})
+  it('should state the first two names and remainder count for four likes', () => {
+    expect(likes(['Alex', 'Jacob', 'Mark', 'Max'])).toEqual(
+      'Alex, Jacob and 2 others like this'
+    )
+  })
 
-  // likes ["Max", "John", "Mark"] // must be "Max, John and Mark like this"
-  // likes ["Alex", "Jacob", "Mark", "Max"] // must be "Alex, Jacob and 2 others like this"
+  it('should state the first two names and remainder count for four likes', () => {
+    expect(likes(['Foo', 'Bar', 'Baz', 'Qux'])).toEqual(
+      'Foo, Bar and 2 others like this'
+    )
+  })
 
-  // likes ["Alex", "Jacob", "Mark", "Max", "Foo"] // must be "Alex, Jacob and 3 others like this"
-  // likes ["Alex", "Jacob", "Mark", "Max", "Foo", "Bar"] // must be "Alex, Jacob and 4 others like this"
-  // likes ["Alex", "Jacob", "Mark", "Max", "Foo", "Bar", "Baz"] // must be "Alex, Jacob and 5 others like this"
+  it('should state the first two names and remainder count for five likes', () => {
+    expect(likes(['Foo', 'Bar', 'Baz', 'Qux', 'Quux'])).toEqual(
+      'Foo, Bar and 3 others like this'
+    )
+  })
+  it('should state the first two names and remainder count for six likes', () => {
+    expect(likes(['Foo', 'Bar', 'Baz', 'Qux', 'Quux', 'Quuz'])).toEqual(
+      'Foo, Bar and 4 others like this'
+    )
+  })
+  it('should state the first two names and remainder count for seven likes', () => {
+    expect(
+      likes(['Foo', 'Bar', 'Baz', 'Qux', 'Quux', 'Quuz', 'Corge'])
+    ).toEqual('Foo, Bar and 5 others like this')
+  })
 })
